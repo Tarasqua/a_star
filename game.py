@@ -105,7 +105,8 @@ class Game:
         while agent['x'] != target['x'] or agent['y'] != target['y']:
             if ((agent['x'] - 1 != obstacles[0]['x']) or (agent['y'] != obstacles[0]['y'])) and (
                     (agent['x'] - 1 != obstacles[1]['x']) or (agent['y'] != obstacles[1]['y'])) and (
-                    (agent['x'] - 1 != obstacles[2]['x']) or (agent['y'] != obstacles[2]['y'])) and Game.OBSTACLE_QUANTITY >= agent['x'] - 1 >= 0:
+                    (agent['x'] - 1 != obstacles[2]['x']) or (agent['y'] != obstacles[2]['y'])) and \
+                    Game.OBSTACLE_QUANTITY >= agent['x'] - 1 >= 0:
                 f1 = g + abs(agent['x'] - target['x'] - 1) + abs(agent['y'] - target['y'])
             if ((agent['x'] != obstacles[0]['x']) or (agent['y'] - 1 != obstacles[0]['y'])) and (
                     (agent['x'] != obstacles[1]['x']) or (agent['y'] - 1 != obstacles[1]['y'])) and (
