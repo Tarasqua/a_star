@@ -62,17 +62,12 @@ class Game:
         plt.xlim([-0.5, 3.5])
         plt.ylim([-0.5, 3.5])
 
-        plt.vlines(-0.5, -0.5, 3.5, color='k')
-        plt.vlines(0.5, -0.5, 3.5, color='k')
-        plt.vlines(1.5, -0.5, 3.5, color='k')
-        plt.vlines(2.5, -0.5, 3.5, color='k')
-        plt.vlines(3.5, -0.5, 3.5, color='k')
-
-        plt.hlines(-0.5, -0.5, 3.5, color='k')
-        plt.hlines(0.5, -0.5, 3.5, color='k')
-        plt.hlines(1.5, -0.5, 3.5, color='k')
-        plt.hlines(2.5, -0.5, 3.5, color='k')
-        plt.hlines(3.5, -0.5, 3.5, color='k')
+        coordinate = -0.5
+        while coordinate != 4.5:
+            plt.vlines(coordinate, -0.5, 3.5, color='k')
+            plt.hlines(coordinate, -0.5, 3.5, color='k')
+            coordinate += 1
+        plt.grid()
 
     def draw_figurines(self):
         """Отрисовка фигурок - агента, препятствий и цели."""
